@@ -1,0 +1,34 @@
+
+
+
+<div class="container">
+
+   <a href="/admin/add-match" class="btn btn-secondary btn-lg active mt-5" role="button" aria-pressed="true">Add New Match</a>
+
+<table class="table table-bordered table-info yes mt-5 me-5">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Match</th>
+       <th scope="col">Description</th>
+       <th scope="col">Image</th>
+    </tr>
+  </thead>
+  <tbody>
+
+      
+{{#each matches }}
+
+    <tr>
+      <th scope="row">{{this.sl}}</th>
+      <td>{{this.model}}</td>
+      <td>{{this.Feautures}}</td>
+      <td><img src="/product-images/{{this._id}}.jpg" class="card-img-top" alt="product-Images" style=" width: 80px; height: 90px;"></td>
+    </tr>
+{{/each}}
+
+  </tbody>
+</table>
+</div>
+
+

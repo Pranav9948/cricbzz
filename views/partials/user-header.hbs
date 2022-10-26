@@ -1,0 +1,70 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-info p-4 ">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white ms-5 fs-1" href="/users">CRICBUZZ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white ms-5 fs-4" aria-current="page" href="#">Matches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white ms-3 fs-4" href="#">Top Performers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white ms-5 fs-4" href="">Venues</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white ms-3 fs-4" href="#">Highlights</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white ms-3 fs-4" href="#">News</a>
+          </li>
+
+
+        </ul>
+
+      </div>
+
+      <div class="dropdown me-5">
+        <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+          {{#if user}}
+
+          {{user.name}}
+
+          {{else}}
+
+          Account
+
+          {{/if}}
+
+
+        </button>
+        <ul class="dropdown-menu">
+
+          {{#if user}}
+
+
+          <li><a class="dropdown-item bg-primary text-white" href="/users/logout">Logout</a></li>
+
+          {{else}}
+
+
+          <li><a class="dropdown-item bg-primary text-white" href="/users/login">Login</a></li>
+
+          {{/if}}
+
+
+          <li><a class="dropdown-item bg-danger text-white" href="/users/signup">SIGN UP</a></li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>

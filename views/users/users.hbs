@@ -1,0 +1,31 @@
+
+   
+
+<section class="m-5">
+
+<div class="row">
+
+
+
+{{#each matches }}
+
+
+<div class="card col-md-4 mt-3 me-3  text-center" style="width: 23rem;">
+  <img src="/product-images/{{this._id}}.jpg" class="card-img-top p-3" alt="matches">
+  <div class="card-body">
+    <h4 class="card-title">{{this.model}}</h4>
+    <h6>{{this.venue}}</h6>
+    <p class="card-text">{{this.Feautures}}</p>
+    <h6>{{this.date}}</h6>
+    <a href="#" class="btn btn-info text-white mt-3">BOOK NOW</a>
+  </div>
+</div>
+
+{{/each}}
+
+
+</div>
+
+
+</section>
+
