@@ -1,0 +1,26 @@
+
+
+<form action="/admin/edituser/{{editUser}}" method="post">
+
+
+<div class="addUser" style="width: 50%; margin: 40px auto;" >
+
+<h1>EDIT USER</h1>
+<br>
+<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping"></span>
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" name="name" value="{{z.name}}">
+</div>
+<br>
+<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping">@</span>
+  <input type="text" class="form-control" placeholder="User Email" aria-label="Username" aria-describedby="addon-wrapping" name="email" value="{{z.email}}">
+</div>
+<button type="submit"
+      class="btn btn-success text-white  mt-5 mb-5 btn-lg ms-5" >Edit User</button></a>
+
+</div>
+
+
+
+</form>

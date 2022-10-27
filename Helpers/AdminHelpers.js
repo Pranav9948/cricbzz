@@ -1,4 +1,5 @@
 const bcrypt = require("bcrypt");
+const { ObjectId } = require("mongodb");
 const collection = require("../config/collection");
 const db = require("../config/connection");
 
@@ -55,8 +56,28 @@ resolve(userzz);
 })
 
 
-  }
+  },
 
+  updateUser:(id,detail)=>{
+
+    console.log("+++",id)
+    console.log("^^^",detail)
+return new Promise((resolve,reject)=>{
+
+db.get().collection(collection.USER_COLLECTION).updateOne({_id:ObjectId(id)},{$set:{name:detail.name,email:detail.email}}).then((x)=>{
+
+  console.log("??",x)
+  
+  resolve()
+
+})
+
+
+})
+
+  }
+  
+ 
 
 
 
